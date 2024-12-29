@@ -1,59 +1,70 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(new MaterialApp(
-    title: "Elisa's Application",
-    home: new HalamanSatu(),
+  runApp(MaterialApp(
+    title: "Card and Parsing",
+    home: new HalSatu(),
   ));
 }
 
-class HalamanSatu extends StatelessWidget {
+class HalSatu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      backgroundColor: Colors.yellow[100],
       appBar: new AppBar(
-        backgroundColor: Colors.red[800],
-        leading: new Icon(Icons.home),
-        title: new Center(
-          child: new Text("Elisa Hardian"),
-        ),
-        actions: <Widget>[new Icon(Icons.search)],
+        title: new Text("Card & Parsing"),
       ),
       body: new Container(
-          // row dan column bisa menampung lebih dari 1 widget, makanya jadi children.
-          //ini jika COLUMN, jika mau ROW, tinggal di ganti jadi Row
+        child: new Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            new CardSaya(
+              icon: Icons.home,
+              teks: "Home",
+              warnaIcon: Colors.brown,
+            ),
+            new CardSaya(
+              icon: Icons.favorite,
+              teks: "Favorite",
+              warnaIcon: Colors.pink,
+            ),
+            new CardSaya(
+              icon: Icons.place,
+              teks: "Place",
+              warnaIcon: Colors.blue,
+            ),
+            new CardSaya(
+              icon: Icons.settings,
+              teks: "Settings",
+              warnaIcon: Colors.black,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class CardSaya extends StatelessWidget {
+  CardSaya({required this.icon, required this.teks, required this.warnaIcon});
+
+  final IconData icon;
+  final String teks;
+  final Color warnaIcon;
+
+  @override
+  Widget build(BuildContext context) {
+    return new Container(
+      padding: new EdgeInsets.all(10.0),
+      child: new Card(
           child: new Column(
         children: <Widget>[
           new Icon(
-            Icons.local_pizza,
-            size: 70.0,
-            color: Colors.red,
+            icon,
+            size: 50.0,
+            color: warnaIcon,
           ),
-          new Row(
-            children: <Widget>[
-              new Icon(
-                Icons.cake,
-                size: 70.0,
-                color: Colors.red,
-              ),
-              new Icon(
-                Icons.cake,
-                size: 70.0,
-                color: Colors.red,
-              ),
-              new Icon(
-                Icons.cake,
-                size: 70.0,
-                color: Colors.red,
-              ),
-            ],
-          ),
-          new Icon(
-            Icons.donut_large,
-            size: 70.0,
-            color: Colors.red,
-          ),
+          new Text(teks, style: new TextStyle(fontSize: 20.0)),
         ],
       )),
     );
