@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="l4_layout_rowcolumn"
+        android:label="l5_card_parsingdata"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
