@@ -1,6 +1,6 @@
 {
-    "name": "l2_style_text_icon",
-    "short_name": "l2_style_text_icon",
+    "name": "l3_appbar",
+    "short_name": "l3_appbar",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
