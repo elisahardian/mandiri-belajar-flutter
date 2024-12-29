@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
 export "FLUTTER_ROOT=C:\src\flutter"
-export "FLUTTER_APPLICATION_PATH=C:\Users\advan\OneDrive\Desktop\MANDIRI\Belajar Flutter\l2_style_text_icon"
+export "FLUTTER_APPLICATION_PATH=C:\Users\advan\OneDrive\Desktop\MANDIRI\Belajar Flutter\l3_appbar"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib\main.dart"
 export "FLUTTER_BUILD_DIR=build"
