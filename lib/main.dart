@@ -20,6 +20,42 @@ class HalamanSatu extends StatelessWidget {
         ),
         actions: <Widget>[new Icon(Icons.search)],
       ),
+      body: new Container(
+          // row dan column bisa menampung lebih dari 1 widget, makanya jadi children.
+          //ini jika COLUMN, jika mau ROW, tinggal di ganti jadi Row
+          child: new Column(
+        children: <Widget>[
+          new Icon(
+            Icons.local_pizza,
+            size: 70.0,
+            color: Colors.red,
+          ),
+          new Row(
+            children: <Widget>[
+              new Icon(
+                Icons.cake,
+                size: 70.0,
+                color: Colors.red,
+              ),
+              new Icon(
+                Icons.cake,
+                size: 70.0,
+                color: Colors.red,
+              ),
+              new Icon(
+                Icons.cake,
+                size: 70.0,
+                color: Colors.red,
+              ),
+            ],
+          ),
+          new Icon(
+            Icons.donut_large,
+            size: 70.0,
+            color: Colors.red,
+          ),
+        ],
+      )),
     );
   }
 }
